@@ -1,0 +1,81 @@
+﻿@model MovimientoInventarioModel
+
+<h1>Editar Movimiento</h1>
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="COD_CIA" />
+
+    <div class="form-group">
+        <label asp-for="COMPANIA_VENTA_3" class="control-label"></label>
+        <input asp-for="COMPANIA_VENTA_3" class="form-control" />
+        <span asp-validation-for="COMPANIA_VENTA_3" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ALMACEN_VENTA" class="control-label"></label>
+        <input asp-for="ALMACEN_VENTA" class="form-control" />
+        <span asp-validation-for="ALMACEN_VENTA" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TIPO_MOVIMIENTO" class="control-label"></label>
+        <input asp-for="TIPO_MOVIMIENTO" class="form-control" />
+        <span asp-validation-for="TIPO_MOVIMIENTO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TIPO_DOCUMENTO" class="control-label"></label>
+        <input asp-for="TIPO_DOCUMENTO" class="form-control" />
+        <span asp-validation-for="TIPO_DOCUMENTO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NRO_DOCUMENTO" class="control-label"></label>
+        <input asp-for="NRO_DOCUMENTO" class="form-control" type="number"/>
+        <span asp-validation-for="NRO_DOCUMENTO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="COD_ITEM_2" class="control-label"></label>
+        <input asp-for="COD_ITEM_2" class="form-control" />
+        <span asp-validation-for="COD_ITEM_2" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PROVEEDOR" class="control-label"></label>
+        <input asp-for="PROVEEDOR" class="form-control" />
+        <span asp-validation-for="PROVEEDOR" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ALMACEN_DESTINO" class="control-label"></label>
+        <input asp-for="ALMACEN_DESTINO" class="form-control" />
+        <span asp-validation-for="ALMACEN_DESTINO" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CANTIDAD" class="control-label"></label>
+        <input asp-for="CANTIDAD" class="form-control" type="number"/>
+        <span asp-validation-for="CANTIDAD" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DOC_REF_1" class="control-label"></label>
+        <input asp-for="DOC_REF_1" class="form-control" />
+        <span asp-validation-for="DOC_REF_1" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DOC_REF_2" class="control-label"></label>
+        <input asp-for="DOC_REF_2" class="form-control" />
+        <span asp-validation-for="DOC_REF_2" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DOC_REF_3" class="control-label"></label>
+        <input asp-for="DOC_REF_3" class="form-control" />
+        <span asp-validation-for="DOC_REF_3" class="text-danger"></span>
+    </div>
+     <div class="form-group">
+        <label asp-for="DOC_REF_4" class="control-label"></label>
+        <input asp-for="DOC_REF_4" class="form-control" />
+        <span asp-validation-for="DOC_REF_4" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DOC_REF_5" class="control-label"></label>
+        <input asp-for="DOC_REF_5" class="form-control" />
+        <span asp-validation-for="DOC_REF_5" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>

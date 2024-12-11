@@ -1,0 +1,65 @@
+@model IEnumerable<MovimientoInventarioModel>
+
+    <h1>Movimientos Inventario</h1>
+
+    <form method="get" action=@Url.Action("Index", "MovimientoInventario" )>
+        <p>
+            Fecha Inicio: @Html.TextBox("fecInicio") <br />
+            Fecha Fin: @Html.TextBox("fecFinal") <br />
+            Tipo Movimiento: @Html.TextBox("tipMovimiento") <br />
+            Nro Documento: @Html.TextBox("nroDocumento") <br />
+            <input type="submit" value="Buscar" />
+        </p>
+    </form>
+
+    <p>
+        <a asp-action="Registrar" class="btn btn-success">Nuevo Movimiento</a>
+    </p>
+
+    <table class="table">
+        <thead>
+           <tr>
+            <th>CODIGO CIA</th>
+            <th>COMPANIA</th>
+            <th>ALMACEN VTA</th>
+            <th>TIPO MOV.</th>
+            <th>TIPO DCTO</th>
+            <th>N° DOCUMENTO</th>
+            <th>ITEM</th>
+            <th>PROVEEDOR</th>
+            <th>ALMACEN DESTINO</th>
+            <th>CANTIDAD</th>
+            <th>REF 1</th>
+            <th>REF 2</th>
+            <th>REF 3</th>
+            <th>REF 4</th>
+            <th>REF 5</th>
+           </tr>
+        </thead>
+        <tbody>
+            @foreach (var movimiento in Model)
+            {
+            <tr>
+                <td>@movimiento.COD_CIA</td>
+                <td>@movimiento.COMPANIA_VENTA_3</td>
+                <td>@movimiento.ALMACEN_VENTA</td>
+                <td>@movimiento.TIPO_MOVIMIENTO</td>
+                <td>@movimiento.TIPO_DOCUMENTO</td>
+                <td>@movimiento.NRO_DOCUMENTO</td>
+                <td>@movimiento.COD_ITEM_2</td>
+                <td>@movimiento.PROVEEDOR</td>
+                <td>@movimiento.ALMACEN_DESTINO</td>
+                <td>@movimiento.CANTIDAD</td>
+                <td>@movimiento.DOC_REF_1</td>
+                <td>@movimiento.DOC_REF_2</td>
+                <td>@movimiento.DOC_REF_3</td>
+                <td>@movimiento.DOC_REF_4</td>
+                <td>@movimiento.DOC_REF_5</td>
+                <td>
+                    <a asp-action="Editar" class="btn btn-warning" asp-route-codcia="@movimiento.COD_CIA">Editar</a>
+                    <a asp-action="Eliminar" class="btn btn-danger" asp-route-codcia="@movimiento.COD_CIA">Eliminar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
